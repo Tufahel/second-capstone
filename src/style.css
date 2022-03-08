@@ -1,3 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
-  background-color: blue;
+  background-color: #fff;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-block,
+.right-block {
+  display: flex;
+}
+
+.right-block li {
+  padding: 0 20px 0 0;
+}
+
+h4 {
+  font-weight: bold;
 }
