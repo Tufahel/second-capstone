@@ -27,3 +27,48 @@ nav {
 h4 {
   font-weight: bold;
 }
+
+/* ------------- Tufahel --------- */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #2196f3;
+  margin: 100px 200px 100px 200px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0.5px solid rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  font-size: 30px;
+  text-align: center;
+}
+
+img {
+  width: 50%;
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-cmnt,
+.btn-like {
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgb(78, 74, 116);
+  color: white;
+  border: none;
+  width: 120px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn-like {
+  background-color: rgb(172, 3, 107);
+}
+
+/* ----------------       ----------- */

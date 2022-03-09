@@ -1,14 +1,13 @@
 import './style.css';
 import _ from 'lodash';
+import { callApi } from './modules/callApi.js';
+import { getApiDetails } from './modules/getApiDetails.js';
+import { frontStructure } from './modules/frontStructure.js';
 
-function component() {
-  const element = document.createElement('div');
+const load = async () => {
+  const data = await callApi();
+  await getApiDetails(data);
+  await frontStructure(data);
+};
 
-  // Lodash, currently included via a script, is required for this line to work
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpackBro'], ' ');
-
-  return element;
-}
-
-document.body.appendChild(component());
+load();
