@@ -18,6 +18,7 @@
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n  margin: 0;\\n  padding: 0;\\n  list-style: none;\\n  font-family: 'Roboto', sans-serif;\\n}\\n\\nbody {\\n  background-color: #fff;\\n  padding: 20px;\\n}\\n\\nnav {\\n  display: flex;\\n  justify-content: space-between;\\n}\\n\\n.left-block,\\n.right-block {\\n  display: flex;\\n}\\n\\n.right-block li {\\n  padding: 0 20px 0 0;\\n}\\n\\nh4 {\\n  font-weight: bold;\\n}\\n\\n/* ------------- Tufahel --------- */\\n\\n.grid-container {\\n  display: grid;\\n  grid-template-columns: auto auto auto auto;\\n  background-color: #2196f3;\\n  margin: 100px 200px 100px 200px;\\n}\\n\\n.grid-item {\\n  background-color: rgba(255, 255, 255, 0.8);\\n  border: 0.5px solid rgba(0, 0, 0, 0.8);\\n  padding: 15px;\\n  font-size: 30px;\\n  text-align: center;\\n}\\n\\nimg {\\n  width: 50%;\\n  cursor: pointer;\\n}\\n\\n.btns {\\n  display: flex;\\n  justify-content: space-around;\\n}\\n\\n.btn-cmnt,\\n.btn-like {\\n  padding: 10px;\\n  font-size: 20px;\\n  background-color: rgb(78, 74, 116);\\n  color: white;\\n  border: none;\\n  width: 120px;\\n  margin-top: 10px;\\n  cursor: pointer;\\n}\\n\\n.btn-like {\\n  background-color: rgb(172, 3, 107);\\n}\\n\\n/* ----------------       ----------- */\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack-template/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
+
 /***/ }),
 
 /***/ "./node_modules/css-loader/dist/runtime/api.js":
@@ -148,6 +149,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getApiDetails\": () => (/* binding */ getApiDetails)\n/* harmony export */ });\n/* harmony import */ var _frontStructure_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./frontStructure.js */ \"./src/modules/frontStructure.js\");\n\n\nconst getApiDetails = async (data) => {\n  data = data.results;\n  console.log('data', data);\n  data.forEach(async (element) => {\n    const res = await fetch(`${element.url}`)\n      .then((res) => res.json());\n    console.log('url', res);\n    (0,_frontStructure_js__WEBPACK_IMPORTED_MODULE_0__.frontStructure)(res);\n  });\n};\n\n//# sourceURL=webpack://webpack-template/./src/modules/getApiDetails.js?");
 
+
 /***/ })
 
 /******/ 	});
@@ -215,6 +217,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
