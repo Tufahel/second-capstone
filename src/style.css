@@ -1,8 +1,9 @@
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Balsamiq Sans', cursive;
 }
 
 body {
@@ -27,3 +28,77 @@ nav {
 h4 {
   font-weight: bold;
 }
+
+/* comments section-Start */
+
+/* pics & attributes-Start */
+
+.pop-up {
+  width: 500px;
+  height: 550px;
+  margin: auto;
+  overflow-y: scroll;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  border: 2px black solid;
+  padding: 0 40px;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+#poke-img {
+  max-width: 50%;
+  margin: 20px;
+  align-self: center;
+}
+
+#poke-name {
+  text-align: center;
+  font-size: 30px;
+}
+
+.poke-attributes {
+  margin: 20px 0;
+}
+
+.poke-attributes li {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* pics & attributes-end */
+
+/* Add comment-start */
+
+form {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+form input,
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  resize: none;
+}
+
+#submit-comment {
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: white;
+}
+
+/* Add comment-end */
+
+/* comments section-End */
