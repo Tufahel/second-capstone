@@ -16,7 +16,8 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"\\r\\n* {\\r\\n  margin: 0;\\r\\n  padding: 0;\\r\\n  list-style: none;\\r\\n  font-family: 'Balsamiq Sans', cursive;\\r\\n}\\r\\n\\r\\nbody {\\r\\n  background-color: #fff;\\r\\n  padding: 20px;\\r\\n}\\r\\n\\r\\nnav {\\r\\n  display: flex;\\r\\n  justify-content: space-between;\\r\\n}\\r\\n\\r\\n.left-block,\\r\\n.right-block {\\r\\n  display: flex;\\r\\n}\\r\\n\\r\\n.right-block li {\\r\\n  padding: 0 20px 0 0;\\r\\n}\\r\\n\\r\\nh4 {\\r\\n  font-weight: bold;\\r\\n}\\r\\n\\r\\n/* comments section-Start */\\r\\n\\r\\n.pop-up {\\r\\n  width: 500px;\\r\\n  height: 550px;\\r\\n  overflow-y: scroll;\\r\\n  background-color: #f5f5f5;\\r\\n  position: absolute;\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  z-index: 2;\\r\\n  top: 50%;\\r\\n  left: 50%;\\r\\n  transform: translate(-50%, -50%);\\r\\n  border: 2px black solid;\\r\\n  -webkit-transform: translate(-50%, -50%);\\r\\n  -moz-transform: translate(-50%, -50%);\\r\\n  -ms-transform: translate(-50%, -50%);\\r\\n  -o-transform: translate(-50%, -50%);\\r\\n}\\r\\n\\r\\n#poke-img {\\r\\n  max-width: 50%;\\r\\n  margin: 20px;\\r\\n  align-self: center;\\r\\n}\\r\\n\\r\\n#poke-name {\\r\\n  text-align: center;\\r\\n  font-size: 30px;\\r\\n}\\r\\n\\r\\n.poke-attributes {\\r\\n  margin: 20px 40px;\\r\\n}\\r\\n\\r\\n.poke-attributes li {\\r\\n  font-size: 20px;\\r\\n  font-weight: bold;\\r\\n  margin: 10px 0;\\r\\n}\\r\\n\\r\\n/* comments section-End */\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack-template/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n  margin: 0;\\n  padding: 0;\\n  list-style: none;\\n  font-family: 'Roboto', sans-serif;\\n}\\n\\nbody {\\n  background-color: #fff;\\n  padding: 20px;\\n}\\n\\nnav {\\n  display: flex;\\n  justify-content: space-between;\\n}\\n\\n.left-block,\\n.right-block {\\n  display: flex;\\n}\\n\\n.right-block li {\\n  padding: 0 20px 0 0;\\n}\\n\\nh4 {\\n  font-weight: bold;\\n}\\n\\n/* ------------- Tufahel --------- */\\n\\n.grid-container {\\n  display: grid;\\n  grid-template-columns: auto auto auto auto;\\n  background-color: #2196f3;\\n  margin: 100px 200px 100px 200px;\\n}\\n\\n.grid-item {\\n  background-color: rgba(255, 255, 255, 0.8);\\n  border: 0.5px solid rgba(0, 0, 0, 0.8);\\n  padding: 15px;\\n  font-size: 30px;\\n  text-align: center;\\n}\\n\\nimg {\\n  width: 50%;\\n  cursor: pointer;\\n}\\n\\n.btns {\\n  display: flex;\\n  justify-content: space-around;\\n}\\n\\n.btn-cmnt,\\n.btn-like {\\n  padding: 10px;\\n  font-size: 20px;\\n  background-color: rgb(78, 74, 116);\\n  color: white;\\n  border: none;\\n  width: 120px;\\n  margin-top: 10px;\\n  cursor: pointer;\\n}\\n\\n.btn-like {\\n  background-color: rgb(172, 3, 107);\\n}\\n\\n/* ----------------       ----------- */\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack-template/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+
 
 /***/ }),
 
@@ -116,17 +117,38 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _img_pic1_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/pic1.png */ \"./src/img/pic1.png\");\n\n\n\n// variables\n\nconst popUp = document.querySelector('.pop-up');\n\n/*\ndefault & close is hidden\npopUp.style.cssText = 'transform: scale(0);';\n*/\n\n// when click show pop up widnow turn on\npopUp.style.cssText = 'transform: scale(1);';\nconst pokemon = [\n  {\n    name: 'bulbasaur',\n    move: 'bulbasaur',\n    length: 'bulbasaur',\n    weight: 'bulbasaur',\n    power: 'bulbasaur',\n  },\n];\n\npokemon.forEach((poke) => {\n  popUp.innerHTML += `\n  <img src=\"./img/pic1.png\" alt=\"\" id=\"poke-img\">\n  <h3 id=\"poke-name\">${poke.name}</h3>\n  <ul class=\"poke-attributes\">\n      <li class=\"attr-1\">Move: ${poke.move}</li>\n      <li class=\"attr-2\">Length: ${poke.length}</li>\n      <li class=\"attr-3\">Weight: ${poke.weight}</li>\n      <li class=\"attr-4\">Power: ${poke.power}</li>\n  </ul>\n  `;\n});\n\n//# sourceURL=webpack://webpack-template/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_callApi_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/callApi.js */ \"./src/modules/callApi.js\");\n/* harmony import */ var _modules_getApiDetails_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getApiDetails.js */ \"./src/modules/getApiDetails.js\");\n/* harmony import */ var _modules_frontStructure_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/frontStructure.js */ \"./src/modules/frontStructure.js\");\n\n\n\n\n\nconst load = async () => {\n  const data = await (0,_modules_callApi_js__WEBPACK_IMPORTED_MODULE_1__.callApi)();\n  (0,_modules_getApiDetails_js__WEBPACK_IMPORTED_MODULE_2__.getApiDetails)(data);\n  (0,_modules_frontStructure_js__WEBPACK_IMPORTED_MODULE_3__.frontStructure)(data);\n};\n\nload();\n\n//# sourceURL=webpack://webpack-template/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/img/pic1.png":
-/*!**************************!*\
-  !*** ./src/img/pic1.png ***!
-  \**************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ "./src/modules/callApi.js":
+/*!********************************!*\
+  !*** ./src/modules/callApi.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"img/pic1.png\";\n\n//# sourceURL=webpack://webpack-template/./src/img/pic1.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"callApi\": () => (/* binding */ callApi)\n/* harmony export */ });\nconst callApi = async () => {\n  const res = await fetch('https://pokeapi.co/api/v2/pokemon')\n    .then((res) => res.json());\n  console.log('res', res);\n  return res;\n};\n\n//# sourceURL=webpack://webpack-template/./src/modules/callApi.js?");
+
+/***/ }),
+
+/***/ "./src/modules/frontStructure.js":
+/*!***************************************!*\
+  !*** ./src/modules/frontStructure.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"frontStructure\": () => (/* binding */ frontStructure)\n/* harmony export */ });\nconst frontStructure = (data) => {\n  const { name } = data;\n  const { id } = data;\n  const img = data.sprites.other['official-artwork'].front_default;\n\n  const gridList = document.querySelector('.grid-list');\n  gridList.innerHTML += `\n        <div class=\"grid-item\">\n        <img src=\"${img}\"/>\n        <div>\n        <h3>${name}</h3>\n        </div>\n        <div class=\"btns\"><button type=\"button\" class=\"btn-like\">Like</button>\n        <button type=\"button\" class=\"btn-cmnt\">Comments</button>\n        </div>\n        </div>\n    `;\n};\n\n//# sourceURL=webpack://webpack-template/./src/modules/frontStructure.js?");
+
+/***/ }),
+
+/***/ "./src/modules/getApiDetails.js":
+/*!**************************************!*\
+  !*** ./src/modules/getApiDetails.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getApiDetails\": () => (/* binding */ getApiDetails)\n/* harmony export */ });\n/* harmony import */ var _frontStructure_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./frontStructure.js */ \"./src/modules/frontStructure.js\");\n\n\nconst getApiDetails = async (data) => {\n  data = data.results;\n  console.log('data', data);\n  data.forEach(async (element) => {\n    const res = await fetch(`${element.url}`)\n      .then((res) => res.json());\n    console.log('url', res);\n    (0,_frontStructure_js__WEBPACK_IMPORTED_MODULE_0__.frontStructure)(res);\n  });\n};\n\n//# sourceURL=webpack://webpack-template/./src/modules/getApiDetails.js?");
+
 
 /***/ })
 
@@ -179,18 +201,6 @@ eval("module.exports = __webpack_require__.p + \"img/pic1.png\";\n\n//# sourceUR
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
