@@ -32,12 +32,6 @@ export const update = async (id) => {
   return replace;
 };
 
-export const productAndLikeCount = (data) => {
-  const count = data.length;
-  console.log('count: ', count);
-  return count;
-};
-
 const showLikeCounts = (e) => {
   const currentNumber = e.innerText;
   e.innerText = parseInt(currentNumber, 10) + 1;

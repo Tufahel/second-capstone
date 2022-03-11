@@ -1,6 +1,6 @@
 import { update } from './likeDetails.js';
 
-export const frontStructure = async (data) => {
+const frontStructure = async (data) => {
   const { name } = data;
   const { id } = data;
   const img = data.sprites.other['official-artwork'].front_default;
@@ -21,3 +21,5 @@ export const frontStructure = async (data) => {
         </div>
     `;
 };
+
+export default frontStructure;

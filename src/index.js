@@ -1,12 +1,13 @@
 import './style.css';
-import { callApi } from './modules/callApi.js';
-import { getApiDetails } from './modules/getApiDetails.js';
-import { frontStructure } from './modules/frontStructure.js';
-import { productAndLikeCount, showItemsCount } from './modules/likeDetails.js';
+import callApi from './modules/callApi.js';
+import getApiDetails from './modules/getApiDetails.js';
+import frontStructure from './modules/frontStructure.js';
+import { showItemsCount } from './modules/likeDetails.js';
+import productCount from './modules/productCount.js';
 
 const load = async () => {
   const data = await callApi();
-  const item = productAndLikeCount(data.results);
+  const item = productCount(data.results);
   showItemsCount(item);
   await getApiDetails(data);
   await frontStructure(data);
@@ -55,8 +56,6 @@ pokemon.forEach((poke) => {
   `;
 });
 
-const sub = document.getElementById('submit-comment');
-
 // Api section-Start
 // Send Data to API ==> Create a new score for the given game
 
@@ -79,13 +78,6 @@ const newScoreAndUser = async () => {
   });
 };
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  newScoreAndUser();
-  getScoresList();
-  form.reset();
-});
-
 // Display the Data
 
 const scoresList = document.querySelector('.com-display');
@@ -105,6 +97,13 @@ const getScoresList = async () => {
   const data = JSON.parse(JSON.stringify(reponse));
   display(data.result);
 };
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  newScoreAndUser();
+  getScoresList();
+  form.reset();
+});
 
 // Window onLoad
 
