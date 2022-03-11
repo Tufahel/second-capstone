@@ -5,14 +5,14 @@ export const frontStructure = (data) => {
 
   const gridList = document.querySelector('.grid-list');
   gridList.innerHTML += `
-        <div class="grid-item">
-        <img src="${img}"/>
-        <div>
-        <h3>${name}</h3>
-        </div>
-        <div class="btns"><button type="button" class="btn-like">Like</button>
-        <button type="button" class="btn-cmnt">Comments</button>
-        </div>
-        </div>
-    `;
+    <div class="grid-item">
+    <img src="${img}"/>
+    <div>
+    <h3>${name}</h3>
+    </div>
+    <div class="btns"><button type="button" class="btn-like">Like</button>
+    <button type="button" class="btn-cmnt" id="${id}">Comments</button>
+    </div>
+    </div>
+  `;
 };

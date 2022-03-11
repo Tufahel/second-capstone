@@ -3,6 +3,10 @@ import './img/pic1.png';
 import { callApi } from './modules/callApi.js';
 import { getApiDetails } from './modules/getApiDetails.js';
 import { frontStructure } from './modules/frontStructure.js';
+import displayPop from './modules/displayPop.js';
+
+// var
+const popUp = document.querySelector('.pop-up');
 
 const load = async () => {
   const data = await callApi();
@@ -12,48 +16,24 @@ const load = async () => {
 
 load();
 
-// variables
-
-const popUp = document.querySelector('.pop-up');
-
-/*
-default & close is hidden
-popUp.style.cssText = 'transform: scale(0);';
-*/
-
-// when click show pop up widnow turn on
-popUp.style.cssText = 'transform: scale(1); ';
-
-const pokemon = [
-  {
-    name: 'bulbasaur',
-    move: 'attr1',
-    length: 'attr2',
-    weight: 'attr3',
-    power: 'attr4',
-  },
-];
-
-pokemon.forEach((poke) => {
-  popUp.innerHTML += `
-  <img src="./img/pic1.png" alt="" id="poke-img">
-  <h3 id="poke-name">${poke.name}</h3>
-  <ul class="poke-attributes">
-      <li class="attr-1">Move: ${poke.move}</li>
-      <li class="attr-2">Length: ${poke.length}</li>
-      <li class="attr-3">Weight: ${poke.weight}</li>
-      <li class="attr-4">Power: ${poke.power}</li>
-  </ul>
-  <ul class="com-display"></ul>
-  <form class="add-comment">
-      <input type="text" name="name" placeholder="Your name" id="name">
-      <textarea name="insights" placeholder="Your insights" id="insights" cols="30" rows="10"></textarea>
-      <button type="submit" id="submit-comment">Comment</button>
-  </form>
-  `;
+window.addEventListener('click', async (e) => {
+  if (e.target.className === 'btn-cmnt') {
+    const { id } = e.target;
+    const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((data) => data.json());
+    displayPop(data);
+  }
 });
 
-const sub = document.getElementById('submit-comment');
+window.addEventListener('click', async (e) => {
+  if (e.target.className === 'close-btn') {
+    popUp.style.cssText = 'transform: scale(0);';
+  }
+});
+
+// when click show pop up widnow turn on
+
+
+// xbtn.addEventListener('click', popUp.style.cssText = 'transform: scale(1);');
 
 // Api section-Start
 // Send Data to API ==> Create a new score for the given game
@@ -67,7 +47,7 @@ const newScoreAndUser = async () => {
   await fetch(`${api}S7bgLJujc1ed84xOIncM/comments/`, {
     method: 'POST',
     body: JSON.stringify({
-      item_id: 'none',
+      item_id: 31,
       username: name.value,
       comment: insights.value,
     }),
@@ -98,10 +78,9 @@ const display = (data) => {
 // GET Data to API
 
 const getScoresList = async () => {
-  const getScrores = await fetch(`${api}S7bgLJujc1ed84xOIncM/comments/`);
-  const reponse = await getScrores.json();
-  const data = JSON.parse(JSON.stringify(reponse));
-  display(data.result);
+  const getScrores = await fetch(`${api}S7bgLJujc1ed84xOIncM/comments?item_id=31`);
+  const data = await getScrores.json();
+  display(data);
 };
 
 // Window onLoad

@@ -33,23 +33,44 @@ h4 {
 
 /* pics & attributes-Start */
 
+.close-btn {
+  position: fixed;
+  top: 5%;
+  left: 90%;
+  cursor: pointer;
+  border: none;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
 .pop-up {
-  width: 500px;
-  height: 550px;
+  position: fixed;
+  width: 40%;
+  height: 80%;
+  inset: 0;
   margin: auto;
   overflow-y: scroll;
   background-color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
   z-index: 2;
   border: 2px black solid;
   padding: 0 40px;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+
+.pop-up > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 #poke-img {
   max-width: 50%;
-  margin: 20px;
-  align-self: center;
+  margin: 20px auto;
 }
 
 #poke-name {
@@ -92,7 +113,8 @@ textarea {
   cursor: pointer;
   padding: 5px 10px;
   font-size: 20px;
-  background-color: white;
+  background-color: #4e4a74;
+  color: white;
 }
 
 /* Add comment-end */
