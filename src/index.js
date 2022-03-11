@@ -1,4 +1,5 @@
 import './style.css';
+import './img/pokemon.png';
 import callApi from './modules/callApi.js';
 import getApiDetails from './modules/getApiDetails.js';
 import frontStructure from './modules/frontStructure.js';

@@ -1,9 +1,8 @@
-
 * {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: 'Balsamiq Sans', cursive;
+  font-family: "Balsamiq Sans", cursive;
 }
 
 body {
@@ -13,13 +12,20 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin: 20px 0 0 50px;
 }
 
 .left-block,
 .right-block {
   display: flex;
   font-size: 30px;
+  gap: 20px;
+}
+
+.poke-img {
+  width: 250px;
 }
 
 .right-block li {
@@ -115,11 +121,11 @@ textarea {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  margin: 100px 50px 100px 50px;
+  margin: 100px 50px;
 }
 
 .grid-item {
-  border: 0.5px solid rgba(0, 0, 0, 0.8);
+  border: 0.5px solid rgb(0 0 0 / 80%);
   padding: 15px;
   font-size: 30px;
   text-align: center;
@@ -143,14 +149,14 @@ img {
 
 .fa-heart {
   font-size: 50px;
-  color: rgb(172, 3, 107);
+  color: rgb(172 3 107);
   cursor: pointer;
 }
 
 .btn-cmnt {
   padding: 10px;
   font-size: 25px;
-  background-color: rgb(78, 74, 116);
+  background-color: rgb(78 74 116);
   color: white;
   border: none;
   width: 150px;
@@ -161,7 +167,7 @@ img {
 @media only screen and (max-width: 768px) {
   .grid-container {
     grid-template-columns: auto auto;
-    margin: 100px 0 100px 0;
+    margin: 100px 0;
   }
 }
 
