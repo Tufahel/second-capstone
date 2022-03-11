@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Title-Info
-> This project is about a ........
+# Second Capstone JavaScript
+> This is a web app where users can view all pokemons with their characteristics, abilities and types. Data is fetched from the Pokeapi. Here user can like, comment and view like and comments of him/her and others.
 
 
 # ScreenShots/GIF
@@ -10,6 +10,8 @@
 ## Built With
 - HTML
 - Javascript
+- CSS
+- Webpack
 - VScode
 
 ## Live Demo
@@ -18,8 +20,11 @@ For the link to the live demo, [Click here]()
 ## Getting Started
 To get a local copy up and running you just need to follow the following steps;
 - Clone this repository with
-git clone https://github.com/Tufahel using your terminal or command line.
+git clone https://github.com/Tufahel/second-capstone.git using your terminal or command line.
 - run code . to open it in vscode
+- run `npm install` in terminal
+- run `npm start`
+Now you are ready to use this web app.
 
 ## Authors
 
@@ -31,8 +36,9 @@ git clone https://github.com/Tufahel using your terminal or command line.
 
 👤 **Author2**
 
-- GitHub: [@](https://github.com)
-- LinkedIn: [@](https://bd.linkedin.com)
+- GitHub: [@](https://github.com/Tufahel)
+- Twitter: [@](https://twitter.com/TufahelAhmed)
+- LinkedIn: [@](https://www.linkedin.com/in/tufahel-ahmed)
 
 ## 🤝 Contributing
 
@@ -46,9 +52,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse second capstone project.
 
 ## 📝 License
 

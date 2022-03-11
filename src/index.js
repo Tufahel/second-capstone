@@ -1,5 +1,20 @@
 import './style.css';
-import './img/pic1.png';
+import './img/pokemon.png';
+import callApi from './modules/callApi.js';
+import getApiDetails from './modules/getApiDetails.js';
+import frontStructure from './modules/frontStructure.js';
+import { showItemsCount } from './modules/likeDetails.js';
+import productCount from './modules/productCount.js';
+
+const load = async () => {
+  const data = await callApi();
+  const item = productCount(data.results);
+  showItemsCount(item);
+  await getApiDetails(data);
+  await frontStructure(data);
+};
+
+load();
 
 // variables
 
@@ -42,8 +57,6 @@ pokemon.forEach((poke) => {
   `;
 });
 
-const sub = document.getElementById('submit-comment');
-
 // Api section-Start
 // Send Data to API ==> Create a new score for the given game
 
@@ -66,13 +79,6 @@ const newScoreAndUser = async () => {
   });
 };
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  newScoreAndUser();
-  getScoresList();
-  form.reset();
-});
-
 // Display the Data
 
 const scoresList = document.querySelector('.com-display');
@@ -93,19 +99,13 @@ const getScoresList = async () => {
   display(data.result);
 };
 
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  newScoreAndUser();
+  getScoresList();
+  form.reset();
+});
+
 // Window onLoad
 
 window.onload = getScoresList();
-
-import { callApi } from './modules/callApi.js';
-import { getApiDetails } from './modules/getApiDetails.js';
-import { frontStructure } from './modules/frontStructure.js';
-
-const load = async () => {
-  const data = await callApi();
-  getApiDetails(data);
-  frontStructure(data);
-};
-
-load();
-

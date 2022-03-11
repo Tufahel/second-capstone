@@ -1,6 +1,6 @@
-import { frontStructure } from './frontStructure.js';
+import frontStructure from './frontStructure.js';
 
-export const getApiDetails = async (data) => {
+const getApiDetails = async (data) => {
   data = data.results;
   console.log('data', data);
   data.forEach(async (element) => {
@@ -10,3 +10,5 @@ export const getApiDetails = async (data) => {
     frontStructure(res);
   });
 };
+
+export default getApiDetails;
