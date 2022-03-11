@@ -64,7 +64,7 @@ const name = document.querySelector('#name');
 const insights = document.querySelector('#insights');
 
 const newScoreAndUser = async () => {
-  await fetch(`${api}dle2ITzmfUdOZVg74TkV/comments/`, {
+  await fetch(`${api}S7bgLJujc1ed84xOIncM/comments/`, {
     method: 'POST',
     body: JSON.stringify({
       item_id: 'none',
@@ -98,7 +98,7 @@ const display = (data) => {
 // GET Data to API
 
 const getScoresList = async () => {
-  const getScrores = await fetch(`${api}dle2ITzmfUdOZVg74TkV/comments/`);
+  const getScrores = await fetch(`${api}S7bgLJujc1ed84xOIncM/comments/`);
   const reponse = await getScrores.json();
   const data = JSON.parse(JSON.stringify(reponse));
   display(data.result);
