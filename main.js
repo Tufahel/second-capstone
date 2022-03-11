@@ -18,6 +18,7 @@
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"\\n* {\\n  margin: 0;\\n  padding: 0;\\n  list-style: none;\\n  font-family: 'Balsamiq Sans', cursive;\\n}\\n\\nbody {\\n  background-color: #fff;\\n  padding: 20px;\\n}\\n\\nnav {\\n  display: flex;\\n  justify-content: space-between;\\n}\\n\\n.left-block,\\n.right-block {\\n  display: flex;\\n  font-size: 30px;\\n}\\n\\n.right-block li {\\n  padding: 0 20px 0 0;\\n}\\n\\nh4 {\\n  font-weight: bold;\\n}\\n\\n/* comments section-Start */\\n\\n/* pics & attributes-Start */\\n\\n.pop-up {\\n  width: 500px;\\n  height: 550px;\\n  margin: auto;\\n  overflow-y: scroll;\\n  background-color: #f5f5f5;\\n  display: flex;\\n  flex-direction: column;\\n  z-index: 2;\\n  border: 2px black solid;\\n  padding: 0 40px;\\n}\\n\\n#poke-img {\\n  max-width: 50%;\\n  margin: 20px;\\n  align-self: center;\\n}\\n\\n#poke-name {\\n  text-align: center;\\n  font-size: 30px;\\n}\\n\\n.poke-attributes {\\n  margin: 20px 0;\\n}\\n\\n.poke-attributes li {\\n  font-size: 20px;\\n  font-weight: bold;\\n  margin: 10px 0;\\n}\\n\\n/* pics & attributes-end */\\n\\n/* Add comment-start */\\n\\nform {\\n  margin: 20px auto;\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  width: 300px;\\n}\\n\\nform input,\\ntextarea {\\n  width: 100%;\\n  margin-bottom: 10px;\\n  padding: 10px;\\n  border: 2px solid black;\\n  resize: none;\\n}\\n\\n#submit-comment {\\n  cursor: pointer;\\n  padding: 5px 10px;\\n  font-size: 20px;\\n  background-color: white;\\n}\\n\\n/* Add comment-end */\\n\\n/* comments section-End */\\n\\n/* ------------- Tufahel --------- */\\n\\n.items-count {\\n  color: blue;\\n  cursor: pointer;\\n}\\n\\n.grid-container {\\n  display: grid;\\n  grid-template-columns: auto auto auto auto;\\n  margin: 100px 50px 100px 50px;\\n}\\n\\n.grid-item {\\n  border: 0.5px solid rgba(0, 0, 0, 0.8);\\n  padding: 15px;\\n  font-size: 30px;\\n  text-align: center;\\n}\\n\\nimg {\\n  width: 50%;\\n  cursor: pointer;\\n}\\n\\n.header-content {\\n  display: flex;\\n  justify-content: space-around;\\n}\\n\\n\\n\\n.like-details {\\n  display: flex;\\n  flex-direction: column;\\n  gap: 10px;\\n}\\n\\n.fa-heart {\\n  font-size: 50px;\\n  color: rgb(172, 3, 107);\\n  cursor: pointer;\\n}\\n\\n.btn-cmnt{\\n  padding: 10px;\\n  font-size: 25px;\\n  background-color: rgb(78, 74, 116);\\n  color: white;\\n  border: none;\\n  width: 150px;\\n  margin-top: 10px;\\n  cursor: pointer;\\n}\\n\\n@media only screen and (max-width: 768px) {\\n  .grid-container {\\n    grid-template-columns: auto auto;\\n    margin: 100px 0px 100px 0px;\\n  }\\n}\\n/* ----------------       ----------- */\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack-template/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
+
 /***/ }),
 
 /***/ "./node_modules/css-loader/dist/runtime/api.js":
@@ -148,6 +149,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getApiDetails\": () => (/* binding */ getApiDetails)\n/* harmony export */ });\n/* harmony import */ var _frontStructure_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./frontStructure.js */ \"./src/modules/frontStructure.js\");\n\n\nconst getApiDetails = async (data) => {\n  data = data.results;\n  console.log('data', data);\n  data.forEach(async (element) => {\n    const res = await fetch(`${element.url}`)\n      .then((res) => res.json());\n    console.log('url', res);\n    (0,_frontStructure_js__WEBPACK_IMPORTED_MODULE_0__.frontStructure)(res);\n  });\n};\n\n//# sourceURL=webpack://webpack-template/./src/modules/getApiDetails.js?");
 
+<<<<<<< HEAD
 /***/ }),
 
 /***/ "./src/modules/likeDetails.js":
@@ -157,6 +159,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"productAndLikeCount\": () => (/* binding */ productAndLikeCount),\n/* harmony export */   \"showItemsCount\": () => (/* binding */ showItemsCount),\n/* harmony export */   \"update\": () => (/* binding */ update)\n/* harmony export */ });\nconst url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/3sTUOK2yYGDszBmzMFAW/likes';\n\nconst likes = async (id) => {\n    const user = { item_id: id};\n    const res = await fetch (url,{\n        method: 'POST',\n        body: JSON.stringify(user),\n        headers: { 'Content-Type': 'application/json'},\n    });\n    console.log('res-likes: ', res);\n    return res;\n}\n\nconst collectLikeData = async () => {\n    const like = await fetch(url)\n        .then((like) => {\n            // console.log('like.json(): ', like.json());\n            return like.json()\n        });\n    \n    // console.log('like:: ', like);\n    return like;\n}\n\nconst update = async (id) => {\n    const likesCollection = await collectLikeData();\n    console.log('lkcollection: ', likesCollection);\n    let replace = 0;\n    likesCollection.forEach((element) => {\n        if(element.item_id.toString() === id.toString()){\n            replace = element.likes;\n        }\n    });\n    console.log('replace: ', replace);\n    return replace;\n}\n\nconst productAndLikeCount = (data) => {\n    const count = data.length;\n    console.log('count: ', count);\n    return count;\n}\n\nconst showLikeCounts = (e) => {\n  const currentNumber = e.innerText;\n  e.innerText = parseInt(currentNumber, 10) + 1;\n}\n\nconst showItemsCount = (counter) => {\n    const counts = document.querySelector('.items-count');\n    counts.innerText = `Products (${counter})`;\n}\n\nconst gridList = document.querySelector('.grid-list');\n// const btnLike = document.querySelector('.btn-like');\n\ngridList.addEventListener('click', (e) => {\n    if(e.target.id === 'btn-like') {\n        const targetElement = e.target;\n        const id = targetElement.parentNode.querySelector('span').id;\n        const likeSpan = targetElement.parentNode.querySelector('span');\n        console.log('id: ', id);\n        likes(id);\n        update(id);\n        showLikeCounts(likeSpan);\n    }\n})\n\n//# sourceURL=webpack://webpack-template/./src/modules/likeDetails.js?");
+=======
+>>>>>>> dev
 
 /***/ })
 
@@ -225,6 +229,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
