@@ -1,6 +1,4 @@
-import getpostInvolveCommentApi from './commentApi.js';
-
-export default async function displayPop(data) {
+export default async function displayPop(data, comments) {
   const moves = data.moves['0'].move.name;
   const { weight } = data;
   const { height } = data;
@@ -10,7 +8,6 @@ export default async function displayPop(data) {
   const img = data.sprites.other['official-artwork'].front_default;
   const popUp = document.querySelector('.pop-up');
   // const comment = await getpostInvolveCommentApi(id);
-
   popUp.innerHTML = `
   <div id="${id}">
   <img src="${img}" alt="" id="poke-img">
@@ -23,10 +20,12 @@ export default async function displayPop(data) {
   </ul>
   <div>
     <h3>Comments</h3>
-    <ul class="com-display"></ul>
+    <ul class="com-display">
+      ${comments.map((item) => `<li>${item.creation_date} : ${item.username} : ${item.comment}</li>`).join('')}
+    </ul>
   </div>
   <h3>Add Comments</h3>
-  <form class="add-comment">
+  <form class="add-comment" onsubmit="subCmnt(event, ${id})">
     <input type="text" name="name" placeholder="Your name" id="name" required>
     <textarea name="insights" placeholder="Your insights" id="insights" cols="30" rows="10" required></textarea>
     <button type="submit" id="submit-comment">Comment</button>
