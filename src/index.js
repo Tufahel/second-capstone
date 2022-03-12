@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import './style.css';
 import './img/pokemon.png';
 import callApi from './modules/callApi.js';
@@ -5,6 +6,7 @@ import getApiDetails from './modules/getApiDetails.js';
 import frontStructure from './modules/frontStructure.js';
 import { showItemsCount } from './modules/likeDetails.js';
 import productCount from './modules/productCount.js';
+import displayPop from './modules/displayPop.js';
 
 const load = async () => {
   const data = await callApi();
@@ -16,96 +18,50 @@ const load = async () => {
 
 load();
 
-// variables
-
-const popUp = document.querySelector('.pop-up');
-
-/*
-default & close is hidden
-popUp.style.cssText = 'transform: scale(0);';
-*/
-
-// when click show pop up widnow turn on
-popUp.style.cssText = 'transform: scale(1); ';
-
-const pokemon = [
-  {
-    name: 'bulbasaur',
-    move: 'attr1',
-    length: 'attr2',
-    weight: 'attr3',
-    power: 'attr4',
-  },
-];
-
-pokemon.forEach((poke) => {
-  popUp.innerHTML += `
-  <img src="./img/pic1.png" alt="" id="poke-img">
-  <h3 id="poke-name">${poke.name}</h3>
-  <ul class="poke-attributes">
-      <li class="attr-1">Move: ${poke.move}</li>
-      <li class="attr-2">Length: ${poke.length}</li>
-      <li class="attr-3">Weight: ${poke.weight}</li>
-      <li class="attr-4">Power: ${poke.power}</li>
-  </ul>
-  <ul class="com-display"></ul>
-  <form class="add-comment">
-      <input type="text" name="name" placeholder="Your name" id="name">
-      <textarea name="insights" placeholder="Your insights" id="insights" cols="30" rows="10"></textarea>
-      <button type="submit" id="submit-comment">Comment</button>
-  </form>
-  `;
-});
-
 // Api section-Start
-// Send Data to API ==> Create a new score for the given game
-
+// var
+const popUp = document.querySelector('.pop-up');
 const api = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-const form = document.querySelector('.add-comment');
-const name = document.querySelector('#name');
-const insights = document.querySelector('#insights');
 
-const newScoreAndUser = async () => {
-  await fetch(`${api}dle2ITzmfUdOZVg74TkV/comments/`, {
-    method: 'POST',
-    body: JSON.stringify({
-      item_id: 'none',
-      username: name.value,
-      comment: insights.value,
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  });
-};
+// Display comments
 
-// Display the Data
-
-const scoresList = document.querySelector('.com-display');
-
-const display = (data) => {
-  scoresList.innerHTML = '';
-  data.forEach((item) => {
-    scoresList.innerHTML += `<li class="score_and_name">${item.username}:${item.comment}</li>`;
-  });
-};
-
-// GET Data to API
-
-const getScoresList = async () => {
-  const getScrores = await fetch(`${api}dle2ITzmfUdOZVg74TkV/comments/`);
-  const reponse = await getScrores.json();
-  const data = JSON.parse(JSON.stringify(reponse));
-  display(data.result);
-};
-
-form.addEventListener('submit', (e) => {
+// Comments event listners
+window.subCmnt = async (e, id) => {
   e.preventDefault();
-  newScoreAndUser();
-  getScoresList();
+  const name = document.querySelector('#name').value.trim();
+  const insights = document.querySelector('#insights').value.trim();
+  const form = document.querySelector('.add-comment');
+  await fetch(`${api}S7bgLJujc1ed84xOIncM/comments`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      item_id: id,
+      username: name,
+      comment: insights,
+    }),
+  }).then((res) => console.log(res))
+    .catch((error) => console.log(error));
   form.reset();
+  const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((data) => data.json());
+  const comments = await fetch(`${api}S7bgLJujc1ed84xOIncM/comments?item_id=${id}`).then((data) => data.json());
+  displayPop(data, comments);
+};
+
+// show pop up
+window.addEventListener('click', async (e) => {
+  if (e.target.className === 'btn-cmnt') {
+    const { id } = e.target;
+    const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((data) => data.json());
+    const comments = await fetch(`${api}S7bgLJujc1ed84xOIncM/comments?item_id=${id}`).then((data) => data.json());
+    displayPop(data, comments);
+  }
 });
 
-// Window onLoad
+// close pop up
+window.addEventListener('click', async (e) => {
+  if (e.target.className === 'close-btn') {
+    popUp.style.cssText = 'transform: scale(0);';
+  }
+});
 
-window.onload = getScoresList();
+// Api section-End

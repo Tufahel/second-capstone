@@ -17,7 +17,7 @@ const frontStructure = async (data) => {
         <span id=${id}>${like}</span>
         </div>
         </div>
-        <button type="button" class="btn-cmnt">Comments</button>
+        <button type="button" class="btn-cmnt" id=${id}>Comments</button>
         </div>
     `;
 };

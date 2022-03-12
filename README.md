@@ -4,8 +4,8 @@
 > This is a web app where users can view all pokemons with their characteristics, abilities and types. Data is fetched from the Pokeapi. Here user can like, comment and view like and comments of him/her and others.
 
 
-# ScreenShots/GIF
-
+# /GIF
+- ![](cap2.gif)
 
 ## Built With
 - HTML
@@ -13,6 +13,7 @@
 - CSS
 - Webpack
 - VScode
+- Jest
 
 ## Live Demo
 For the link to the live demo, [Click here]()
@@ -30,15 +31,15 @@ Now you are ready to use this web app.
 
 👤 **Author1**
 
-- GitHub: [@](https://github.com)
-- Twitter: [@](https://twitter.com)
-- LinkedIn: [@](https://www.linkedin.com)
+- GitHub: [@Banstein](https://github.com/Banstein)
+- Twitter: [@islam_bahnas](https://twitter.com/islam_bahnas)
+- LinkedIn: [islam-bahnas](www.linkedin.com/in/islam-bahnas)
 
 👤 **Author2**
 
-- GitHub: [@](https://github.com/Tufahel)
-- Twitter: [@](https://twitter.com/TufahelAhmed)
-- LinkedIn: [@](https://www.linkedin.com/in/tufahel-ahmed)
+- GitHub: [@Tufahel](https://github.com/Tufahel)
+- Twitter: [@TufahelAhmed](https://twitter.com/TufahelAhmed)
+- LinkedIn: [@tufahel-ahmed](https://www.linkedin.com/in/tufahel-ahmed)
 
 ## 🤝 Contributing
 
