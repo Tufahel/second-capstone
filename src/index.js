@@ -5,8 +5,6 @@ import { getApiDetails } from './modules/getApiDetails.js';
 import { frontStructure } from './modules/frontStructure.js';
 import displayPop from './modules/displayPop.js';
 
-// var
-const popUp = document.querySelector('.pop-up');
 
 const load = async () => {
   const data = await callApi();
@@ -16,33 +14,15 @@ const load = async () => {
 
 load();
 
-window.addEventListener('click', async (e) => {
-  if (e.target.className === 'btn-cmnt') {
-    const { id } = e.target;
-    const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((data) => data.json());
-    displayPop(data);
-  }
-});
-
-window.addEventListener('click', async (e) => {
-  if (e.target.className === 'close-btn') {
-    popUp.style.cssText = 'transform: scale(0);';
-  }
-});
-
-// when click show pop up widnow turn on
-
-
-// xbtn.addEventListener('click', popUp.style.cssText = 'transform: scale(1);');
-
 // Api section-Start
-// Send Data to API ==> Create a new score for the given game
-
+// var
+const popUp = document.querySelector('.pop-up');
 const api = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 const form = document.querySelector('.add-comment');
 const name = document.querySelector('#name');
 const insights = document.querySelector('#insights');
 
+// Send Data to API ==> Create a new score for the given game
 const newScoreAndUser = async () => {
   await fetch(`${api}S7bgLJujc1ed84xOIncM/comments/`, {
     method: 'POST',
@@ -57,14 +37,7 @@ const newScoreAndUser = async () => {
   });
 };
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  newScoreAndUser();
-  getScoresList();
-  form.reset();
-});
-
-// Display the Data
+// Display popup comments
 
 const scoresList = document.querySelector('.com-display');
 
@@ -82,6 +55,32 @@ const getScoresList = async () => {
   const data = await getScrores.json();
   display(data);
 };
+
+// Comments event listners
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  newScoreAndUser();
+  getScoresList();
+  form.reset();
+});
+
+window.addEventListener('click', async (e) => {
+  if (e.target.className === 'btn-cmnt') {
+    const { id } = e.target;
+    const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((data) => data.json());
+    displayPop(data);
+  }
+});
+
+// close pop up
+window.addEventListener('click', async (e) => {
+  if (e.target.className === 'close-btn') {
+    popUp.style.cssText = 'transform: scale(0);';
+  }
+});
+
+// Api section-End
 
 // Window onLoad
 
