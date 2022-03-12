@@ -1,4 +1,4 @@
-async function postInvolveCommentApi(id, name, userComment) {
+export async function postInvolveCommentApi(id, name, userComment) {
   const userObj = {
     item_id: id,
     username: name,
