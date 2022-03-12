@@ -1,3 +1,5 @@
+import getpostInvolveCommentApi from './commentApi.js';
+
 export default async function displayPop(data) {
   const moves = data.moves['0'].move.name;
   const { weight } = data;
@@ -7,7 +9,6 @@ export default async function displayPop(data) {
   const { id } = data;
   const img = data.sprites.other['official-artwork'].front_default;
   const popUp = document.querySelector('.pop-up');
-
   // const comment = await getpostInvolveCommentApi(id);
 
   popUp.innerHTML = `
@@ -20,11 +21,14 @@ export default async function displayPop(data) {
     <li class="attr-3">Weight: ${weight}</li>
     <li class="attr-4">Power: ${ability}</li>
   </ul>
-  <div></div>
-  <ul class="com-display"></ul>
+  <div>
+    <h3>Comments</h3>
+    <ul class="com-display"></ul>
+  </div>
+  <h3>Add Comments</h3>
   <form class="add-comment">
-    <input type="text" name="name" placeholder="Your name" id="name">
-    <textarea name="insights" placeholder="Your insights" id="insights" cols="30" rows="10"></textarea>
+    <input type="text" name="name" placeholder="Your name" id="name" required>
+    <textarea name="insights" placeholder="Your insights" id="insights" cols="30" rows="10" required></textarea>
     <button type="submit" id="submit-comment">Comment</button>
     <button type="button" class="close-btn">X</button>
   </form>

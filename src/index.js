@@ -72,8 +72,6 @@ window.addEventListener('click', async (e) => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  newScoreAndUser();
-  getScoresList();
   form.reset();
 });
 
