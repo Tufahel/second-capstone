@@ -21,7 +21,7 @@ const form = document.querySelector('.add-comment');
 const name = document.querySelector('#name');
 const insights = document.querySelector('#insights');
 
-// Send Data to API ==> Create a new score for the given game
+// Send comment Data to API
 const newScoreAndUser = async () => {
   await fetch(`${api}S7bgLJujc1ed84xOIncM/comments/`, {
     method: 'POST',
@@ -36,23 +36,21 @@ const newScoreAndUser = async () => {
   });
 };
 
-// Display popup comments
+// GET comment Data from API
+const getScoresList = async () => {
+  const getScrores = await fetch(`${api}S7bgLJujc1ed84xOIncM/comments?item_id=31`);
+  const data = await getScrores.json();
+  displayCmnt(data);
+};
 
+// Display comments
 const scoresList = document.querySelector('.com-display');
 
-const display = (data) => {
+const displayCmnt = (data) => {
   scoresList.innerHTML = '';
   data.forEach((item) => {
     scoresList.innerHTML += `<li class="score_and_name">${item.username}:${item.comment}</li>`;
   });
-};
-
-// GET Data to API
-
-const getScoresList = async () => {
-  const getScrores = await fetch(`${api}S7bgLJujc1ed84xOIncM/comments?item_id=31`);
-  const data = await getScrores.json();
-  display(data);
 };
 
 // Comments event listners

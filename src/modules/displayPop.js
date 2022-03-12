@@ -20,6 +20,7 @@ export default async function displayPop(data) {
     <li class="attr-3">Weight: ${weight}</li>
     <li class="attr-4">Power: ${ability}</li>
   </ul>
+  <div></div>
   <ul class="com-display"></ul>
   <form class="add-comment">
     <input type="text" name="name" placeholder="Your name" id="name">
