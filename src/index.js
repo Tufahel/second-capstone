@@ -28,8 +28,8 @@ const api = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/
 // Comments event listners
 window.subCmnt = async (e, id) => {
   e.preventDefault();
-  const name = document.querySelector('#name').value;
-  const insights = document.querySelector('#insights').value;
+  const name = document.querySelector('#name').value.trim();
+  const insights = document.querySelector('#insights').value.trim();
   const form = document.querySelector('.add-comment');
   await fetch(`${api}S7bgLJujc1ed84xOIncM/comments`, {
     method: 'POST',
@@ -42,6 +42,9 @@ window.subCmnt = async (e, id) => {
   }).then((res) => console.log(res))
     .catch((error) => console.log(error));
   form.reset();
+  const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((data) => data.json());
+  const comments = await fetch(`${api}S7bgLJujc1ed84xOIncM/comments?item_id=${id}`).then((data) => data.json());
+  displayPop(data, comments);
 };
 
 // show pop up
