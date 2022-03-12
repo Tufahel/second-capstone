@@ -13,6 +13,7 @@
 - CSS
 - Webpack
 - VScode
+- Jest
 
 ## Live Demo
 For the link to the live demo, [Click here]()
