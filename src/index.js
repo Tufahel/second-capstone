@@ -1,15 +1,19 @@
 /* eslint-disable no-unused-expressions */
 import './style.css';
-import './img/pic1.png';
-import { callApi } from './modules/callApi.js';
-import { getApiDetails } from './modules/getApiDetails.js';
-import { frontStructure } from './modules/frontStructure.js';
 import displayPop from './modules/displayPop.js';
+import './img/pokemon.png';
+import callApi from './modules/callApi.js';
+import getApiDetails from './modules/getApiDetails.js';
+import frontStructure from './modules/frontStructure.js';
+import { showItemsCount } from './modules/likeDetails.js';
+import productCount from './modules/productCount.js';
 
 const load = async () => {
   const data = await callApi();
-  getApiDetails(data);
-  frontStructure(data);
+  const item = productCount(data.results);
+  showItemsCount(item);
+  await getApiDetails(data);
+  await frontStructure(data);
 };
 
 load();

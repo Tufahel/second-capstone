@@ -1,9 +1,8 @@
-
 * {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: 'Balsamiq Sans', cursive;
+  font-family: "Balsamiq Sans", cursive;
 }
 
 body {
@@ -13,12 +12,20 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin: 20px 0 0 50px;
 }
 
 .left-block,
 .right-block {
   display: flex;
+  font-size: 30px;
+  gap: 20px;
+}
+
+.poke-img {
+  width: 250px;
 }
 
 .right-block li {
@@ -66,6 +73,12 @@ h4 {
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
 }
 
 #poke-img {
@@ -123,16 +136,19 @@ textarea {
 
 /* ------------- Tufahel --------- */
 
+.items-count {
+  color: blue;
+  cursor: pointer;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  background-color: #2196f3;
-  margin: 100px 200px 100px 200px;
+  margin: 100px 50px;
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 0.5px solid rgba(0, 0, 0, 0.8);
+  border: 0.5px solid rgb(0 0 0 / 80%);
   padding: 15px;
   font-size: 30px;
   text-align: center;
@@ -143,25 +159,39 @@ img {
   cursor: pointer;
 }
 
-.btns {
+.header-content {
   display: flex;
   justify-content: space-around;
 }
 
-.btn-cmnt,
-.btn-like {
+.like-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fa-heart {
+  font-size: 50px;
+  color: rgb(172 3 107);
+  cursor: pointer;
+}
+
+.btn-cmnt {
   padding: 10px;
-  font-size: 20px;
-  background-color: rgb(78, 74, 116);
+  font-size: 25px;
+  background-color: rgb(78 74 116);
   color: white;
   border: none;
-  width: 120px;
+  width: 150px;
   margin-top: 10px;
   cursor: pointer;
 }
 
-.btn-like {
-  background-color: rgb(172, 3, 107);
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: auto auto;
+    margin: 100px 0;
+  }
 }
 
 /* ----------------       ----------- */
