@@ -22,7 +22,7 @@ export default async function displayPop(data, comments) {
     <li class="attr-4">Power: ${ability}</li>
   </ul>
   <div>
-    <h3>Comments ${cmntCounter} </h3>
+    <h3 class="show-display">Comments (${cmntCounter}) </h3>
     <ul class="com-display">
       ${comments.map((item) => `<li>${item.creation_date} : ${item.username} : ${item.comment}</li>`).join('')}
     </ul>

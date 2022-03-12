@@ -42,6 +42,7 @@ window.subCmnt = async (e, id) => {
   }).then((res) => console.log(res))
     .catch((error) => console.log(error));
   form.reset();
+  displayPop(data, comments)
 };
 
 // show pop up
