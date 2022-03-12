@@ -10,10 +10,10 @@ document.body.innerHTML = `<main>
 </footer>`;
 
 describe('Comment count', () => {
-    test('Comment Count', () => {
-        const comments = ['li', 'li', 'li'];
-        const commentsLength = comments.length;
-        const result = productCount(comments);
-        expect(result).toBe(commentsLength);
-    });
+  test('Comment Count', () => {
+    const comments = ['li', 'li', 'li'];
+    const commentsLength = comments.length;
+    const result = productCount(comments);
+    expect(result).toBe(commentsLength);
+  });
 });
