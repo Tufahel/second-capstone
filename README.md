@@ -4,7 +4,7 @@
 > This is a web app where users can view all pokemons with their characteristics, abilities and types. Data is fetched from the Pokeapi. Here user can like, comment and view like and comments of him/her and others.
 
 
-# /GIF
+# GIF
 - ![](cap2.gif)
 
 ## Built With
@@ -16,7 +16,7 @@
 - Jest
 
 ## Live Demo
-For the link to the live demo, [Click here]()
+For the link to the live demo, [Click here](https://tufahel.github.io/second-capstone/)
 
 ## Getting Started
 To get a local copy up and running you just need to follow the following steps;
