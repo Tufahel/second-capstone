@@ -1,3 +1,5 @@
+import productCount from './productCount.js';
+
 export default async function displayPop(data, comments) {
   const moves = data.moves['0'].move.name;
   const { weight } = data;
@@ -8,6 +10,7 @@ export default async function displayPop(data, comments) {
   const img = data.sprites.other['official-artwork'].front_default;
   const popUp = document.querySelector('.pop-up');
   // const comment = await getpostInvolveCommentApi(id);
+  const cmntCounter = productCount(comments)
   popUp.innerHTML = `
   <div id="${id}">
   <img src="${img}" alt="" id="poke-img">
@@ -19,7 +22,7 @@ export default async function displayPop(data, comments) {
     <li class="attr-4">Power: ${ability}</li>
   </ul>
   <div>
-    <h3>Comments</h3>
+    <h3>Comments ${cmntCounter} </h3>
     <ul class="com-display">
       ${comments.map((item) => `<li>${item.creation_date} : ${item.username} : ${item.comment}</li>`).join('')}
     </ul>

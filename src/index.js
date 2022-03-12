@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-expressions */
 import './style.css';
-import displayPop from './modules/displayPop.js';
 import './img/pokemon.png';
 import callApi from './modules/callApi.js';
 import getApiDetails from './modules/getApiDetails.js';
 import frontStructure from './modules/frontStructure.js';
 import { showItemsCount } from './modules/likeDetails.js';
 import productCount from './modules/productCount.js';
+import displayPop from './modules/displayPop.js';
 
 const load = async () => {
   const data = await callApi();
@@ -23,22 +23,7 @@ load();
 const popUp = document.querySelector('.pop-up');
 const api = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 
-// // GET comment Data from API
-// const getScoresList = async () => {
-//   const getScrores = await fetch(`${api}S7bgLJujc1ed84xOIncM/comments?item_id=31`);
-//   const data = await getScrores.json();
-//   displayCmnt(data);
-// };
-
 // Display comments
-const scoresList = document.querySelector('.com-display');
-
-// const displayCmnt = (data) => {
-//   scoresList.innerHTML = '';
-//   data.forEach((item) => {
-//     scoresList.innerHTML += `<li class="score_and_name">${item.username}:${item.comment}</li>`;
-//   });
-// };
 
 // Comments event listners
 window.subCmnt = async (e, id) => {
