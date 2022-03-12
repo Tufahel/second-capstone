@@ -22,10 +22,11 @@ For the link to the live demo, [Click here](https://tufahel.github.io/second-cap
 To get a local copy up and running you just need to follow the following steps;
 - Clone this repository with
 git clone https://github.com/Tufahel/second-capstone.git using your terminal or command line.
-- run code . to open it in vscode
+- run code `.` to open it in vscode
 - run `npm install` in terminal
 - run `npm start`
 Now you are ready to use this web app.
+- run `npm run test` to test the counter funtions.
 
 ## Authors
 

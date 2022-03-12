@@ -7,7 +7,6 @@ const likes = async (id) => {
     body: JSON.stringify(user),
     headers: { 'Content-Type': 'application/json' },
   });
-  console.log('res-likes: ', res);
   return res;
 };
 
@@ -15,7 +14,6 @@ const collectLikeData = async () => {
   const like = await fetch(url)
     .then((like) => like.json());
 
-  // console.log('like:: ', like);
   return like;
 };
 
@@ -28,7 +26,6 @@ export const update = async (id) => {
       replace = element.likes;
     }
   });
-  console.log('replace: ', replace);
   return replace;
 };
 
@@ -43,14 +40,12 @@ export const showItemsCount = (counter) => {
 };
 
 const gridList = document.querySelector('.grid-list');
-// const btnLike = document.querySelector('.btn-like');
 
 gridList.addEventListener('click', (e) => {
   if (e.target.id === 'btn-like') {
     const targetElement = e.target;
     const { id } = targetElement.parentNode.querySelector('span');
     const likeSpan = targetElement.parentNode.querySelector('span');
-    console.log('id: ', id);
     likes(id);
     update(id);
     showLikeCounts(likeSpan);

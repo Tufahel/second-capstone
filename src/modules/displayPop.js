@@ -9,7 +9,6 @@ export default async function displayPop(data, comments) {
   const { id } = data;
   const img = data.sprites.other['official-artwork'].front_default;
   const popUp = document.querySelector('.pop-up');
-  // const comment = await getpostInvolveCommentApi(id);
   const cmntCounter = productCount(comments);
   popUp.innerHTML = `
   <div id="${id}">

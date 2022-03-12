@@ -18,14 +18,9 @@ const load = async () => {
 
 load();
 
-// Api section-Start
-// var
 const popUp = document.querySelector('.pop-up');
 const api = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 
-// Display comments
-
-// Comments event listners
 window.subCmnt = async (e, id) => {
   e.preventDefault();
   const name = document.querySelector('#name').value.trim();
@@ -47,7 +42,6 @@ window.subCmnt = async (e, id) => {
   displayPop(data, comments);
 };
 
-// show pop up
 window.addEventListener('click', async (e) => {
   if (e.target.className === 'btn-cmnt') {
     const { id } = e.target;
@@ -57,11 +51,8 @@ window.addEventListener('click', async (e) => {
   }
 });
 
-// close pop up
 window.addEventListener('click', async (e) => {
   if (e.target.className === 'close-btn') {
     popUp.style.cssText = 'transform: scale(0);';
   }
 });
-
-// Api section-End
