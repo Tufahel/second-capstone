@@ -5,7 +5,6 @@ import { getApiDetails } from './modules/getApiDetails.js';
 import { frontStructure } from './modules/frontStructure.js';
 import displayPop from './modules/displayPop.js';
 
-
 const load = async () => {
   const data = await callApi();
   getApiDetails(data);
@@ -58,13 +57,6 @@ const getScoresList = async () => {
 
 // Comments event listners
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  newScoreAndUser();
-  getScoresList();
-  form.reset();
-});
-
 window.addEventListener('click', async (e) => {
   if (e.target.className === 'btn-cmnt') {
     const { id } = e.target;
@@ -78,6 +70,13 @@ window.addEventListener('click', async (e) => {
   if (e.target.className === 'close-btn') {
     popUp.style.cssText = 'transform: scale(0);';
   }
+});
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  newScoreAndUser();
+  getScoresList();
+  form.reset();
 });
 
 // Api section-End
