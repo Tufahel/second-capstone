@@ -30,9 +30,9 @@ Now you are ready to use this web app.
 
 👤 **Author1**
 
-- GitHub: [@](https://github.com)
-- Twitter: [@](https://twitter.com)
-- LinkedIn: [@](https://www.linkedin.com)
+- GitHub: [@Banstein](https://github.com/Banstein)
+- Twitter: [@islam_bahnas](https://twitter.com/islam_bahnas)
+- LinkedIn: [islam-bahnas](www.linkedin.com/in/islam-bahnas)
 
 👤 **Author2**
 
