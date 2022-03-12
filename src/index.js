@@ -42,7 +42,6 @@ window.subCmnt = async (e, id) => {
   }).then((res) => console.log(res))
     .catch((error) => console.log(error));
   form.reset();
-  displayPop(data, comments)
 };
 
 // show pop up
@@ -63,7 +62,3 @@ window.addEventListener('click', async (e) => {
 });
 
 // Api section-End
-
-// Window onLoad
-
-window.onload = getScoresList();
