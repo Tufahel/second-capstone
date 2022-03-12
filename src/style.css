@@ -125,11 +125,6 @@ textarea {
   color: white;
 }
 
-/* .show-display {
-  text-align: center;
-  margin-bottom: 20px;
-} */
-
 /* Add comment-end */
 
 /* comments section-End */
@@ -155,8 +150,8 @@ textarea {
 }
 
 img {
-  width: 50%;
-  height: 40%;
+  width: 60%;
+  height: 48%;
   cursor: pointer;
 }
 
